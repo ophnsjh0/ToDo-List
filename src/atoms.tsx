@@ -23,6 +23,7 @@ const { persistAtom } = recoilPersist({
     storage: localStorage,
 })
 
+
 export const toDoState = atom<IToDo[]>({
     key: "toDo",
     default: [],
@@ -36,4 +37,13 @@ export const toDoSelector = selector({
         const category = get(categoryState)
         return toDos.filter((toDo) => toDo.category === category);
     }
+})
+
+export interface INewCategory {
+    newCategory: string;
+}
+
+export const newCategory = atom<INewCategory[]>({
+    key: "newCategory",
+    default: []
 })

@@ -1,6 +1,5 @@
 import React from "react";
 import { useSetRecoilState } from "recoil";
-import { idText } from "typescript";
 import { IToDo, toDoState, Category } from "../atoms";
 
 function ToDo({ text, category, id }: IToDo) {
